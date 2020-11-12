@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu ul {
+  display: flex;
+  margin: 0 auto;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.menu li {
+  font-size: 1.125rem;
+  margin-left: 1.5rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 86%;
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 1120px;
+  min-width: 620px;
+}
+
+.container .checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.button-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-error {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 25px;
+  max-width: 90%;
+}
+
+.search-form {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+.error-message {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  align-items: center;
+  color: rgb(247, 43, 43);
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90%;
+    min-width: 300px;
+  }
+  .button-submit .btn,
+  .button-error .btn {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .error-message {
+    font-size: 14px;
+  }
+}
