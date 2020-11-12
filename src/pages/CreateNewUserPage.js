@@ -9,7 +9,11 @@ import { Button, TextField, Checkbox } from '@material-ui/core';
 import '../index.css';
 
 const schema = yup.object().shape({
-  username: yup.string().required('Напишите Ваше имя'),
+  username: yup
+    .string()
+    .required('Напишите Ваше имя')
+    .max(150, 'Слишком длинное имя')
+    .matches(/^[\w.@+-]+$/, 'В Вашем имени использованы некоррректные символы'),
   password: yup
     .string()
     .required('Вы забыли ввести Ваш пароль')
@@ -18,8 +22,14 @@ const schema = yup.object().shape({
       'Пароль должен содержать цифры, а так же буквы в верхнем и нижнем регистре и быть не менее 8 символов'
     ),
 
-  first_name: yup.string().required('Вы не ввели Ваш first_name'),
-  last_name: yup.string().required('Вы не ввели Ваш last_name'),
+  first_name: yup
+    .string()
+    .required('Вы не ввели Ваш first_name')
+    .max(30, 'Слишком длиннное имя'),
+  last_name: yup
+    .string()
+    .required('Вы не ввели Ваш last_name')
+    .max(150, 'Слишком длиннное имя'),
 });
 
 const CreateNewUserPage = () => {
