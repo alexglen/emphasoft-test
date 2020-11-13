@@ -30,6 +30,7 @@ a {
   margin-top: 50px;
   max-width: 1120px;
   min-width: 620px;
+  padding-bottom: 15px;
 }
 
 .container .checkbox {
